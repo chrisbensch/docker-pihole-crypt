@@ -10,7 +10,7 @@ services:
       - "6680:80/tcp"
       - "6443:443/tcp"
     environment:
-      - DNS1="127.0.0.1#5399"
+    #  - DNS1="127.0.0.1#5399"
     #  - ServerIP=192.168.0.60 / 
       - TZ='Europe/London'
     cap_add:
