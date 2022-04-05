@@ -10,8 +10,8 @@ services:
       - "6680:80/tcp"
       - "6443:443/tcp"
     environment:
-      - DNS1="127.0.53.53#5399"
-    #  - ServerIP=192.168.0.60
+      - DNS1="127.0.0.1#5399"
+    #  - ServerIP=192.168.0.60 /
       - TZ='Europe/London'
     cap_add:
       - NET_ADMIN
@@ -29,7 +29,7 @@ services:
       - DNSPROXY_UPSTREAM="quic://dns.emeraldonion.org:8853"
       - DNSPROXY_BOOTSTRAP="9.9.9.9"
     ports:
-      - 127.0.53.53:5399:53/udp
+      - 5399:53/udp
     #volumes:
     #  - ./data/data-dnsproxy:/data
     restart: unless-stopped
